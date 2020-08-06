@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
         child: Text(
           dataProvider.dataText,
           style: textTheme.headline4,
+          textAlign: TextAlign.center,
         ),
       ),
     );
