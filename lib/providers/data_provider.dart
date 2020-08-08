@@ -1,7 +1,12 @@
+import 'package:injectable/injectable.dart';
+
 import '../repositories/data_repository.dart';
 
+@injectable
 class DataProvider {
-  final _dataRepository = DataRepository();
+  final DataRepository dataRepository;
 
-  String get dataText => "Data dari repository: ${_dataRepository.data}";
+  DataProvider(this.dataRepository);
+
+  String get dataText => "Data dari repository: ${dataRepository.data}";
 }
